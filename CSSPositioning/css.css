@@ -47,8 +47,8 @@ header {
 header > p {
     margin: 0;
     height: 50px;
+    font-size: 20px;
     align-items: center;
-    font-size: 30px;
     justify-content: center;
     display: flex;
 }
@@ -69,6 +69,7 @@ header button {
     padding: 0;
     width: 160px;
     border: 1px;
+    font-size: 15px;
     background-color: #0000FF;
     color: #fff;
 }
