@@ -48,6 +48,7 @@ header > p {
     margin: 0;
     height: 50px;
     align-items: center;
+    font-size: 30px;
     justify-content: center;
     display: flex;
 }
