@@ -42,14 +42,14 @@ body {
     text-decoration: underline;
 }
 
-/* Main Content - Mobile Order */
+/* Main Content - Mobile: all sections stacked */
 .main-content {
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
 }
 
-/* Mobile Order: Summary, Education, Experience, Projects, Skills */
+/* Mobile Order */
 .summary {
     order: 1;
 }
@@ -73,7 +73,6 @@ body {
 /* Sections */
 .section {
     margin-bottom: 30px;
-    width: 100%;
 }
 
 .section h2 {
@@ -276,6 +275,7 @@ body {
 
 /* ===================================
    DESKTOP LAYOUT - 1200px and above
+   Uses CSS Grid for two-column layout
    =================================== */
 
 @media screen and (min-width: 1200px) {
@@ -298,39 +298,38 @@ body {
         font-size: 40px;
     }
 
-    /* Main Content - Two Column Layout with Wrap */
+    /* Main Content - CSS Grid Layout */
     .main-content {
         padding: 50px 70px;
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 35% 65%;
+        grid-gap: 40px;
     }
 
-    /* Desktop Order: Education and Skills in left column, rest in right column */
+    /* Grid positioning for two-column layout */
     .education {
-        order: 1;
-        width: 35%;
-        margin-right: 40px;
+        grid-column: 1;
+        grid-row: 1;
     }
 
     .skills {
-        order: 2;
-        width: 35%;
-        margin-right: 40px;
+        grid-column: 1;
+        grid-row: 2;
     }
 
     .summary {
-        order: 3;
-        width: 65%;
+        grid-column: 2;
+        grid-row: 1;
     }
 
     .experience {
-        order: 4;
-        width: 65%;
+        grid-column: 2;
+        grid-row: 2;
     }
 
     .projects {
-        order: 5;
-        width: 65%;
+        grid-column: 2;
+        grid-row: 3;
     }
 
     /* Larger Text */
@@ -373,7 +372,7 @@ body {
     /* Project Pages - Keep Vertical */
     .project-page {
         padding: 50px 150px;
-        flex-direction: column;
+        display: block;
     }
     
     .project-page .section {
