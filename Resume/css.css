@@ -1,3 +1,7 @@
+/* ===================================
+   BASE STYLES - Mobile (412px)
+   =================================== */
+
 * {
     box-sizing: border-box;
 }
@@ -14,6 +18,7 @@ body {
     background-color: white;
 }
 
+/* Header */
 .resume-header {
     background-color: #2E5266;
     color: white;
@@ -37,23 +42,38 @@ body {
     text-decoration: underline;
 }
 
+/* Main Content - Mobile Order */
 .main-content {
     display: flex;
     flex-direction: column;
     padding: 20px;
 }
 
-.sidebar {
-    width: 100%;
-    margin-bottom: 30px;
+/* Mobile Order: Summary, Education, Experience, Projects, Skills */
+.summary {
+    order: 1;
 }
 
-.content-area {
-    width: 100%;
+.education {
+    order: 2;
 }
 
+.experience {
+    order: 3;
+}
+
+.projects {
+    order: 4;
+}
+
+.skills {
+    order: 5;
+}
+
+/* Sections */
 .section {
     margin-bottom: 30px;
+    width: 100%;
 }
 
 .section h2 {
@@ -78,24 +98,31 @@ body {
     margin: 0 0 12px 0;
 }
 
+/* Professional Summary */
+.summary p {
+    background-color: #F5F5F5;
+    border-left: 4px solid #2E5266;
+    padding: 15px;
+    text-align: justify;
+}
+
 /* Education */
-.sidebar .section p {
+.education p {
     background-color: #F5F5F5;
     border-left: 4px solid #6E8898;
     padding: 15px;
     font-size: 15px;
     line-height: 1.8;
-    margin: 0;
 }
 
 /* Skills */
-.sidebar .section ul {
+.skills ul {
     list-style: none;
     padding-left: 0;
     margin: 0;
 }
 
-.sidebar .section li {
+.skills li {
     background-color: #F5F5F5;
     border-left: 3px solid #2E5266;
     padding: 10px 12px;
@@ -103,13 +130,7 @@ body {
     font-size: 14px;
 }
 
-.content-area .section:first-child p {
-    background-color: #F5F5F5;
-    border-left: 4px solid #2E5266;
-    padding: 15px;
-    text-align: justify;
-}
-
+/* Work Experience */
 .job {
     background-color: #F5F5F5;
     border-left: 4px solid #2E5266;
@@ -155,6 +176,7 @@ body {
     color: #555;
 }
 
+/* Projects */
 .project {
     background-color: #F5F5F5;
     border-left: 4px solid #6E8898;
@@ -181,6 +203,7 @@ body {
     color: #555;
 }
 
+/* Project Links */
 .project-links {
     background-color: #F5F5F5;
     border-left: 4px solid #2E5266;
@@ -211,6 +234,7 @@ body {
     color: #6E8898;
 }
 
+/* Project Pages */
 .project-page .section img {
     display: block;
     margin: 20px auto;
@@ -250,6 +274,10 @@ body {
     color: white;
 }
 
+/* ===================================
+   DESKTOP LAYOUT - 1200px and above
+   =================================== */
+
 @media screen and (min-width: 1200px) {
     
     body {
@@ -270,21 +298,42 @@ body {
         font-size: 40px;
     }
 
+    /* Main Content - Two Column Layout with Wrap */
     .main-content {
         padding: 50px 70px;
         flex-direction: row;
+        flex-wrap: wrap;
     }
 
-    .sidebar {
+    /* Desktop Order: Education and Skills in left column, rest in right column */
+    .education {
+        order: 1;
         width: 35%;
-        margin-bottom: 0;
         margin-right: 40px;
     }
 
-    .content-area {
+    .skills {
+        order: 2;
+        width: 35%;
+        margin-right: 40px;
+    }
+
+    .summary {
+        order: 3;
         width: 65%;
     }
-    
+
+    .experience {
+        order: 4;
+        width: 65%;
+    }
+
+    .projects {
+        order: 5;
+        width: 65%;
+    }
+
+    /* Larger Text */
     .section h2 {
         font-size: 26px;
     }
@@ -293,12 +342,12 @@ body {
         font-size: 17px;
     }
 
-    .sidebar .section p {
+    .education p {
         font-size: 17px;
         padding: 18px;
     }
 
-    .sidebar .section li {
+    .skills li {
         font-size: 16px;
         padding: 12px 14px;
     }
@@ -321,8 +370,13 @@ body {
         font-size: 16px;
     }
 
+    /* Project Pages - Keep Vertical */
     .project-page {
         padding: 50px 150px;
         flex-direction: column;
+    }
+    
+    .project-page .section {
+        width: 100%;
     }
 }
