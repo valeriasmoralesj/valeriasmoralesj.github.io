@@ -44,17 +44,11 @@ body {
 }
 
 .sidebar {
-    width: 100%;
-    margin-bottom: 30px;
+    display: none;
 }
 
 .content-area {
     width: 100%;
-}
-
-/* Hide desktop education on mobile */
-.education-desktop {
-    display: none;
 }
 
 /* Style mobile education */
@@ -64,6 +58,21 @@ body {
     padding: 15px;
     font-size: 15px;
     line-height: 1.8;
+}
+
+/* Style mobile skills */
+.skills-mobile ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.skills-mobile li {
+    background-color: #F5F5F5;
+    border-left: 3px solid #2E5266;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    font-size: 14px;
 }
 
 .section {
@@ -286,6 +295,7 @@ body {
     }
 
     .main-content .sidebar {
+        display: block;
         width: 35%;
         margin-bottom: 0;
         margin-right: 40px;
@@ -297,13 +307,10 @@ body {
         order: 2;
     }
 
-    /* Hide mobile education, show desktop education */
-    .education-mobile {
+    /* Hide mobile education and skills on desktop */
+    .education-mobile,
+    .skills-mobile {
         display: none;
-    }
-
-    .education-desktop {
-        display: block;
     }
 
     .section h2 {
