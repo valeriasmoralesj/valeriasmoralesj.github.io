@@ -1,7 +1,3 @@
-/* ===================================
-   BASE STYLES - Mobile (412px)
-   =================================== */
-
 * {
     box-sizing: border-box;
 }
@@ -18,7 +14,6 @@ body {
     background-color: white;
 }
 
-/* Header */
 .resume-header {
     background-color: #2E5266;
     color: white;
@@ -42,38 +37,37 @@ body {
     text-decoration: underline;
 }
 
-/* Main Content - Mobile */
 .main-content {
-    padding: 20px;
     display: flex;
     flex-direction: column;
+    padding: 20px;
 }
 
-/* Mobile Order: Summary, Education, Experience, Projects, Skills */
-.summary {
-    order: 1;
+.sidebar {
+    width: 100%;
+    margin-bottom: 30px;
 }
 
-.education {
-    order: 2;
+.content-area {
+    width: 100%;
 }
 
-.experience {
-    order: 3;
+/* Hide desktop education on mobile */
+.education-desktop {
+    display: none;
 }
 
-.projects {
-    order: 4;
+/* Style mobile education */
+.education-mobile p {
+    background-color: #F5F5F5;
+    border-left: 4px solid #6E8898;
+    padding: 15px;
+    font-size: 15px;
+    line-height: 1.8;
 }
 
-.skills {
-    order: 5;
-}
-
-/* Sections */
 .section {
     margin-bottom: 30px;
-    width: 100%;
 }
 
 .section h2 {
@@ -98,31 +92,13 @@ body {
     margin: 0 0 12px 0;
 }
 
-/* Professional Summary */
-.summary p {
-    background-color: #F5F5F5;
-    border-left: 4px solid #2E5266;
-    padding: 15px;
-    text-align: justify;
-}
-
-/* Education */
-.education p {
-    background-color: #F5F5F5;
-    border-left: 4px solid #6E8898;
-    padding: 15px;
-    font-size: 15px;
-    line-height: 1.8;
-}
-
-/* Skills */
-.skills ul {
+.sidebar .section ul {
     list-style: none;
     padding-left: 0;
     margin: 0;
 }
 
-.skills li {
+.sidebar .section li {
     background-color: #F5F5F5;
     border-left: 3px solid #2E5266;
     padding: 10px 12px;
@@ -130,7 +106,21 @@ body {
     font-size: 14px;
 }
 
-/* Work Experience */
+.sidebar .section p {
+    background-color: #F5F5F5;
+    border-left: 4px solid #6E8898;
+    padding: 15px;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.content-area .section:first-child p {
+    background-color: #F5F5F5;
+    border-left: 4px solid #2E5266;
+    padding: 15px;
+    text-align: justify;
+}
+
 .job {
     background-color: #F5F5F5;
     border-left: 4px solid #2E5266;
@@ -176,7 +166,6 @@ body {
     color: #555;
 }
 
-/* Projects */
 .project {
     background-color: #F5F5F5;
     border-left: 4px solid #6E8898;
@@ -203,7 +192,6 @@ body {
     color: #555;
 }
 
-/* Project Links */
 .project-links {
     background-color: #F5F5F5;
     border-left: 4px solid #2E5266;
@@ -234,7 +222,6 @@ body {
     color: #6E8898;
 }
 
-/* Project Pages */
 .project-page .section img {
     display: block;
     margin: 20px auto;
@@ -274,10 +261,6 @@ body {
     color: white;
 }
 
-/* ===================================
-   DESKTOP LAYOUT - 1200px and above
-   =================================== */
-
 @media screen and (min-width: 1200px) {
     
     body {
@@ -289,7 +272,6 @@ body {
         margin: 40px auto;
     }
 
-    /* Header */
     .resume-header {
         padding: 50px 70px;
     }
@@ -298,43 +280,32 @@ body {
         font-size: 40px;
     }
 
-    /* Two Column Layout with flexbox wrap */
     .main-content {
         padding: 50px 70px;
         flex-direction: row;
-        flex-wrap: wrap;
     }
 
-    /* Left Column: Education and Skills */
-    .education {
+    .main-content .sidebar {
+        width: 35%;
+        margin-bottom: 0;
+        margin-right: 40px;
         order: 1;
-        width: 35%;
-        margin-right: 40px;
     }
 
-    .skills {
+    .main-content .content-area {
+        width: 65%;
         order: 2;
-        width: 35%;
-        margin-right: 40px;
     }
 
-    /* Right Column: Summary, Experience, Projects */
-    .summary {
-        order: 3;
-        width: calc(65% - 40px);
+    /* Hide mobile education, show desktop education */
+    .education-mobile {
+        display: none;
     }
 
-    .experience {
-        order: 4;
-        width: calc(65% - 40px);
+    .education-desktop {
+        display: block;
     }
 
-    .projects {
-        order: 5;
-        width: calc(65% - 40px);
-    }
-
-    /* Larger Text */
     .section h2 {
         font-size: 26px;
     }
@@ -343,14 +314,14 @@ body {
         font-size: 17px;
     }
 
-    .education p {
-        font-size: 17px;
-        padding: 18px;
-    }
-
-    .skills li {
+    .sidebar .section li {
         font-size: 16px;
         padding: 12px 14px;
+    }
+
+    .sidebar .section p {
+        font-size: 17px;
+        padding: 18px;
     }
 
     .job,
@@ -371,14 +342,8 @@ body {
         font-size: 16px;
     }
 
-    /* Project Pages */
     .project-page {
         padding: 50px 150px;
-        flex-wrap: nowrap;
-    }
-    
-    .project-page .section {
-        width: 100%;
-        order: 0;
+        flex-direction: column;
     }
 }
