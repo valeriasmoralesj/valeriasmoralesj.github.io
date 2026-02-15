@@ -44,7 +44,7 @@ body {
 }
 
 .sidebar {
-    display: none;
+    display: none !important;
 }
 
 .content-area {
