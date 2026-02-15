@@ -78,6 +78,17 @@ body {
     margin: 0 0 12px 0;
 }
 
+/* Education */
+.sidebar .section p {
+    background-color: #F5F5F5;
+    border-left: 4px solid #6E8898;
+    padding: 15px;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Skills */
 .sidebar .section ul {
     list-style: none;
     padding-left: 0;
@@ -90,14 +101,6 @@ body {
     padding: 10px 12px;
     margin-bottom: 10px;
     font-size: 14px;
-}
-
-.sidebar .section p {
-    background-color: #F5F5F5;
-    border-left: 4px solid #6E8898;
-    padding: 15px;
-    font-size: 15px;
-    line-height: 1.8;
 }
 
 .content-area .section:first-child p {
@@ -258,6 +261,7 @@ body {
         margin: 40px auto;
     }
 
+    /* Header */
     .resume-header {
         padding: 50px 70px;
     }
@@ -271,16 +275,16 @@ body {
         flex-direction: row;
     }
 
-    .main-content .sidebar {
+    .sidebar {
         width: 35%;
         margin-bottom: 0;
         margin-right: 40px;
     }
 
-    .main-content .content-area {
+    .content-area {
         width: 65%;
     }
-
+    
     .section h2 {
         font-size: 26px;
     }
@@ -289,14 +293,14 @@ body {
         font-size: 17px;
     }
 
-    .sidebar .section li {
-        font-size: 16px;
-        padding: 12px 14px;
-    }
-
     .sidebar .section p {
         font-size: 17px;
         padding: 18px;
+    }
+
+    .sidebar .section li {
+        font-size: 16px;
+        padding: 12px 14px;
     }
 
     .job,
