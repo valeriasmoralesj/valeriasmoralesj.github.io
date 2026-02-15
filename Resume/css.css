@@ -51,7 +51,6 @@ body {
     width: 100%;
 }
 
-/* Style mobile education */
 .education-mobile p {
     background-color: #F5F5F5;
     border-left: 4px solid #6E8898;
@@ -60,7 +59,6 @@ body {
     line-height: 1.8;
 }
 
-/* Style mobile skills */
 .skills-mobile ul {
     list-style: none;
     padding-left: 0;
@@ -306,8 +304,7 @@ body {
         width: 65%;
         order: 2;
     }
-
-    /* Hide mobile education and skills on desktop */
+    
     .education-mobile,
     .skills-mobile {
         display: none;
