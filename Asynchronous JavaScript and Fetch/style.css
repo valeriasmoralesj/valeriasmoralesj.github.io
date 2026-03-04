@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #b8e4f0;
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+  min-height: 100vh;
+}
+
+/* ── Outer light-blue wrapper ── */
+#outer {
+  width: 100%;
+  max-width: 680px;
+}
+
+/* ── White rounded card with gold border ── */
+#main-card {
+  background: #ffffff;
+  border: 5px solid #d4a017;
+  border-radius: 28px;
+  padding: 24px 30px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ── Search ── */
+#search-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.label {
+  font-size: 1rem;
+  color: #111;
+}
+
+#search-row {
+  display: flex;
+  gap: 4px;
+}
+
+#pokemon-input {
+  padding: 3px 6px;
+  font-size: 0.95rem;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  width: 200px;
+  background: #fff;
+}
+
+#find-btn {
+  padding: 3px 12px;
+  font-size: 0.95rem;
+  background: #f0f0f0;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+#find-btn:hover { background: #ddd; }
+
+#error-msg {
+  color: #c0392b;
+  font-size: 0.85rem;
+  display: none;
+}
+
+/* ── Pokemon image ── */
+#pokemon-img {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  display: none;
+}
+
+/* ── Audio player ── */
+#pokemon-audio {
+  width: 100%;
+  max-width: 380px;
+}
+
+/* ── 2x2 move dropdowns ── */
+#moves-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  width: 100%;
+}
+
+#moves-section select {
+  padding: 4px 5px;
+  font-size: 0.85rem;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  background: #fff;
+  width: 100%;
+}
+
+/* ── Add to Team button ── */
+#add-btn {
+  padding: 4px 18px;
+  font-size: 0.95rem;
+  background: #f0f0f0;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+#add-btn:hover { background: #ddd; }
+
+/* ── Team list (inside card, below button) ── */
+#team-list {
+  width: 100%;
+  border: 2px solid #111;
+  border-radius: 4px;
+  display: none;
+  overflow: hidden;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid #111;
+}
+
+.team-member:last-child {
+  border-bottom: none;
+}
+
+.team-member-img-cell {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.team-member-img-cell img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.team-member-moves-cell {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.team-member-moves {
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 1.05rem;
+  color: #111;
+  line-height: 1.4;
+}

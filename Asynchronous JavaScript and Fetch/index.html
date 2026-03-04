@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pokemon Team Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Outer blue background wrapper -->
+  <div id="outer">
+
+    <!-- White inner card with gold border -->
+    <div id="main-card">
+
+      <!-- Search -->
+      <div id="search-section">
+        <span class="label">Name or ID</span>
+        <div id="search-row">
+          <input type="text" id="pokemon-input" />
+          <button id="find-btn" onclick="findPokemon()">Find</button>
+        </div>
+        <div id="error-msg">Pokemon not found. Please try again.</div>
+      </div>
+
+      <!-- Pokemon image -->
+      <img id="pokemon-img" src="" alt="" />
+
+      <!-- Audio player -->
+      <audio id="pokemon-audio" controls></audio>
+
+      <!-- 2x2 move dropdowns -->
+      <div id="moves-section">
+        <select id="move1"></select>
+        <select id="move2"></select>
+        <select id="move3"></select>
+        <select id="move4"></select>
+      </div>
+
+      <!-- Add to Team -->
+      <button id="add-btn" onclick="addToTeam()">Add to Team</button>
+
+      <!-- Team list lives inside the card, below the button -->
+      <div id="team-list"></div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
